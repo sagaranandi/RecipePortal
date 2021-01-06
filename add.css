@@ -1,0 +1,372 @@
+
+  
+@import url("https://fonts.googleapis.com/css?family=Cormorant|Italiana|Montserrat&display=swap");
+body {
+  box-sizing: border-box;
+  background: url("https://images.unsplash.com/photo-1550935770-d58cbf30c003?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80") no-repeat;
+  background-size: cover;
+}
+
+body, html {
+  margin: auto;
+  padding: auto;
+  height: 100%;
+  width: 100%;
+}
+
+#cont {
+  font-family: "Montserrat", sans-serif;
+  background: url("https://images.unsplash.com/photo-1550935770-d58cbf30c003?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80") no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
+  position: relative;
+}
+
+#grid-container {
+  display: grid;
+  grid-template-columns: 1fr 7fr;
+}
+
+/*=========================Header======================
+=========================================================*/
+header {
+  position: fixed;
+  padding-left: 1.5em;
+  padding-top: 3em;
+  transition: 0.4s;
+  transition: background-color 0s;
+  color: white;
+}
+header h1 {
+  font-size: 40px;
+  line-height: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Italiana", serif;
+}
+
+/*====================Recipes List==================
+======================================================*/
+#list {
+  border-top: 2px dotted #FFFFF0;
+  margin-top: 200px;
+  padding: 15px;
+  color: white;
+}
+#list .btn {
+  width: 50%;
+  margin: 0 auto;
+}
+#list ul {
+  margin: 0;
+  margin-top: 50px;
+  padding: 10px;
+  text-align: center;
+  line-height: 1.1;
+  font-size: 20px;
+  max-height: 400px;
+  overflow: auto;
+}
+#list ul li {
+  list-style-type: none;
+  margin: 10px;
+  padding: 5px;
+  border-bottom: 1px dashed orange;
+}
+#list ul li:hover {
+  border-bottom: 3px dashed orange;
+  padding-bottom: 3px;
+}
+
+/*===================Buttons==================
+================================================*/
+.btn {
+  background-color: #FCD12A;
+  color: #883000;
+  border: none;
+  padding: 10px;
+  display: block;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  font-family: "Montserrat", serif;
+  margin: 0 auto;
+}
+.btn:hover {
+  position: relative;
+  box-shadow: none;
+  left: 3px;
+  top: 3px;
+}
+
+/*======================Showcase=========================
+===========================================================*/
+section {
+  justify-self: center;
+  padding-top: 40px;
+  margin-top: 50px;
+  margin-left: 50px;
+  width: 80%;
+}
+section .showcase {
+  width: 100%;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+  grid-template-areas: ". header" ". prep" "ing-header ing" "dir-header dir" ". buttons";
+  align-content: right;
+}
+
+section .showcase #prep {
+  grid-area: prep;
+  color: white;
+  text-align: center;
+}
+section .showcase #prep p {
+  display: inline-block;
+}
+section .showcase #prep p span {
+  font-family: "Cormorant", serif;
+  font-size: 25px;
+  margin-right: 7px;
+}
+section .showcase #prep p span i {
+  font-size: 22px;
+}
+section .showcase h2 {
+  font-size: 30px;
+  padding: 0px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  grid-area: header;
+  color: #FFFFF0;
+  text-align: center;
+}
+section .showcase h3 {
+  font-size: 24px;
+  font-family: "Cormorant", serif;
+  color: #FFFFF0;
+}
+
+section .showcase #showcase-ingredients,
+section .showcase #showcase-directions {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 17px;
+  padding: 10px 30px;
+  background-color: white;
+  margin: 10px;
+  color: black;
+}
+section .showcase #showcase-ingredients {
+  list-style-type: disc;
+  grid-area: ing;
+  padding-left: 0;
+}
+section .showcase #showcase-directions {
+  grid-area: dir;
+  padding-left: 0;
+}
+section .showcase #buttons {
+  grid-area: buttons;
+  display: flex;
+  flex-direction: row;
+}
+section .showcase #header-ing {
+  grid-area: ing-header;
+}
+section .showcase #header-dir {
+  grid-area: dir-header;
+}
+section .showcase #header-ing, section .showcase #header-dir {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  place-self: center end;
+  transform: rotate(180deg);
+}
+section .showcase .btn {
+  margin: 20px auto;
+  justify-self: center;
+  display: inline-block;
+}
+
+/*==================Create and Edit windows===============
+===========================================================*/
+.create-edit-box {
+  margin: 100px auto;
+  margin-bottom: 130px;
+  width: 60%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#create-recipe, #edit-recipe {
+  position: fixed;
+  background-color: rgba(120, 117, 134, 0.85);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 5;
+  overflow: auto;
+  display: none;
+  grid-template-columns: 1fr;
+}
+#create-recipe h1, #edit-recipe h1 {
+  text-align: center;
+  font-family: "Italiana", serif;
+  margin-top: 50px;
+}
+#create-recipe small:nth-child(2), #edit-recipe small:nth-child(2) {
+  color: #883000;
+  text-align: center;
+  font-family: "Cormorant", serif;
+  display: block;
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+#create-recipe .prep, #edit-recipe .prep {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+}
+#create-recipe input, #create-recipe textarea, #edit-recipe input, #edit-recipe textarea {
+  width: 70%;
+  display: block;
+  margin: 0 auto;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  margin-bottom: 15px;
+  background-color: #e6e6e6;
+  font-family: "Montserrat", serif;
+  font-size: 16px;
+}
+#create-recipe input::placeholder, #create-recipe textarea::placeholder, #edit-recipe input::placeholder, #edit-recipe textarea::placeholder {
+  font-family: "Montserrat", serif;
+  color: #5a5a5a;
+  font-size: 14px;
+}
+#create-recipe input:hover, #create-recipe textarea:hover, #edit-recipe input:hover, #edit-recipe textarea:hover {
+  border: 1px dashed darkorange;
+}
+#create-recipe #recipe-prepTime-mins, #create-recipe #recipe-prepTime-hours, #create-recipe #recipe-servings, #create-recipe #edit-prepTime-mins, #create-recipe #edit-prepTime-hours, #create-recipe #edit-servings, #edit-recipe #recipe-prepTime-mins, #edit-recipe #recipe-prepTime-hours, #edit-recipe #recipe-servings, #edit-recipe #edit-prepTime-mins, #edit-recipe #edit-prepTime-hours, #edit-recipe #edit-servings {
+  display: inline-block;
+  width: 40px;
+  margin: 0px;
+}
+#create-recipe label, #edit-recipe label {
+  width: 70%;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: block;
+  margin-top: 5px;
+  margin: 0 auto;
+  padding-right: 20px;
+}
+#create-recipe .btn, #edit-recipe .btn {
+  margin: 20px auto;
+  justify-self: center;
+}
+
+.active {
+  position: fixed;
+  z-index: 4;
+  font-size: 18px;
+  display: block;
+  width: 100%;
+  top: 0;
+  background: white;
+  box-shadow: 1px 1px 5px black;
+  padding: 3px;
+}
+.active h1 {
+  font-size: 20px;
+  color: black;
+  margin: 0;
+  padding: 7px;
+}
+
+/*======================Scrollbars============================
+==============================================================*/
+::-webkit-scrollbar {
+  width: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #777;
+}
+
+::-webkit-scrollbar-thumb {
+  background: orange;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #FCD12A;
+}
+
+/*==========Media Queries for Smaller Screens===============
+==============================================================*/
+@media only screen and (max-width: 840px) {
+  #cont {
+    font-family: "Montserrat", sans-serif;
+    background: url("https://images.unsplash.com/photo-1532768907235-78653b7dc71d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1534&q=80") no-repeat;
+    background-size: cover;
+    background-position: left top;
+    background-size: auto;
+    position: relative;
+  }
+
+  #create-recipe label, #create-recipe input, #create-recipe textarea, #create-recipe .prep, #edit-recipe label, #edit-recipe input, #edit-recipe textarea, #edit-recipe .prep {
+    width: 90%;
+  }
+  #create-recipe .create-edit-box, #edit-recipe .create-edit-box {
+    width: 80%;
+  }
+
+  header {
+    position: absolute;
+  }
+
+  #grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  section {
+    width: 90%;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  section .showcase {
+    grid-template-areas: "header header" ". prep" "ing-header ing" "dir-header dir" ". buttons";
+    font-size: 16px;
+  }
+  section .showcase #showcase-ingredients,
+section .showcase #showcase-directions {
+    font-size: 16px;
+    margin: 0px;
+    margin-bottom: 10px;
+    margin-left: 5px;
+  }
+  section .showcase h3 {
+    font-size: 14px;
+  }
+  section .showcase #header-ing, section .showcase #header-dir {
+    font-size: 36px;
+  }
+  ul .nav-tabs{
+    background-color:#161616;
+  }
+}
+
