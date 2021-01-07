@@ -19,8 +19,8 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     </ul>';
     if(isset($_SESSION['loggedin'])&& $_SESSION['loggedin']==true){
       echo ' <p class="text-light my-0 mx-2"> Welcome '.$_SESSION['uName'].'</p>
-      <a href="/miniproject/add.php" class="btn btn-outline-info ml-2" >Add A recipe</a>
-      <a href="partials/_logout.php" class="btn btn-outline-danger mx-2" >Logout</a>';
+      <a href="/miniproject/add.php" class="btn btn-outline-warning ml-2" >Add A recipe</a>
+      <a href="partials/_logout.php" class="btn btn-outline-warning mx-2" >Logout</a>';
     } 
     else{
       echo'<button class="btn btn-outline-success my-0 mx-2 " data-toggle="modal" data-target="loginModal" <a class="nav-link"#" href="#"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loginModal"></a>Log In</button>

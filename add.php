@@ -35,14 +35,22 @@ include 'partials/_dbconnect.php';
 $rname= $_POST['rname'] ;
 $catname= $_POST['category'];
 
+
+
+
+
 $catid= "SELECT `cid` FROM `categories` WHERE `cname`=\"$catname\"";
-$caid=mysqli_query($conn,$catid);
+//$caid=mysqli_query($conn,$catid);
+$q = mysqli_query($conn,$catid);
+
+$n=mysqli_fetch_assoc($q);
+$cid= $n['cid'];
 
 $ingredients= $_POST['ingredients'];
 $steps= $_POST['steps'];
 
 
-$sql="INSERT INTO `recipes`(  `category`, `cid`, `rname`, `ingredients`, `steps`, `date`) VALUES ('$catname','$caid','$rname','$ingredients','$steps',current_timestamp())";
+$sql="INSERT INTO `recipes`(  `category`, `cid`, `rname`, `ingredients`, `steps`, `date`) VALUES ('$catname','$cid','$rname','$ingredients','$steps',current_timestamp())";
 //echo $sql;
 if($conn->query($sql)==true){
    // echo "Successfully inserted";
