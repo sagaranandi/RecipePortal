@@ -84,59 +84,58 @@ if($insert == true)
                 <div id="list">
                     <button class="btn"
                         onclick="document.querySelector('#create-recipe').style.display ='initial'">New</button>
-                        <br>
-                        <br>
-                        </br>
-                        </br>
-                        <button class="btn"
-                        onclick= location.href="/miniproject/index.php" .style.display ='initial'">Home</button>
+                    <br>
+                    <br>
+                    </br>
+                    </br>
+                    <button class="btn" onclick=location.href="/miniproject/index.php" .style.display='initial'">Home</button>
                 </div>
 
   
 
                 <!--Create a Recipe Box-->
-                <form action="<?php echo $_SERVER['REQUEST_URI']?>" method="post">
-                    <div id="create-recipe">
-                        <div class="create-edit-box">
-                            <h1>Create a recipe</h1>
-                            <small></small>
+                <form action=" <?php echo $_SERVER['REQUEST_URI']?>" method="post">
+                        <div id="create-recipe">
+                            <div class="create-edit-box">
+                                <h1>Create a recipe</h1>
+                                <small></small>
 
-                            <label for="recipe-name">Recipe name</label>
-                            <input type="text" id="rname" name="rname" required>
+                                <label for="recipe-name">Recipe name</label>
+                                <input type="text" id="rname" name="rname" required>
 
-                            <label for="category">Category
-                                <?php
+                                <label for="category">Category
+                                    <?php
                             include 'partials/_dbconnect.php';
                             $cat="  SELECT `cname` FROM `categories`";
                             $rescat = mysqli_query($conn,$cat);
                             
                             ?>
-                                <select name="category">
-                                    <?php
+                                    <select name="category">
+                                        <?php
                             while($rows=$rescat->fetch_assoc())
                             {
                                 $cname=$rows['cname'];
                                 echo "<option value='$cname'>$cname</option>";
                             }
                             ?>
-                                </select>
-                            </label>
-                            <br></br>
-                            <label for="recipe-ingredients">Ingredients</label>
-                            <textarea id="ingredients" name="ingredients"
-                                placeholder='Pushing "Enter" creates a new bullet.' rows="10" cols="30"></textarea>
+                                    </select>
+                                </label>
+                                <br></br>
+                                <label for="recipe-ingredients">Ingredients</label>
+                                <textarea id="ingredients" name="ingredients"
+                                    placeholder='Pushing "Enter" creates a new bullet.' rows="10" cols="30"></textarea>
 
-                            <label for="recipe-directions">Directions</label>
-                            <textarea id="steps" name="steps" placeholder='Pushing "Enter" creates a new number.'
-                                rows="10" cols="30"></textarea>
-                            <button class="btn">Save</button>
-                            <button class="btn" onclick="(function() {document.querySelector('#create-recipe').style.display = 'none';
+                                <label for="recipe-directions">Directions</label>
+                                <textarea id="steps" name="steps" placeholder='Pushing "Enter" creates a new number.'
+                                    rows="10" cols="30"></textarea>
+                                <button class="btn">Save</button>
+                                <button class="btn" onclick="(function() {document.querySelector('#create-recipe').style.display = 'none';
                         return false;})()">Close</button>
+                            </div>
                         </div>
-                    </div>
-                </form>
-               
-                <script src="add.js"></script>
+                        </form>
+
+                        <script src="add.js"></script>
     </body>
     <!-- partial -->
     <script src="./add.js"></script>

@@ -46,7 +46,13 @@ header h1 {
   text-transform: uppercase;
   font-family: "Italiana", serif;
 }
-
+header h2 {
+  font-size: 40px;
+  line-height: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Italiana", serif;
+}
 /*====================Recipes List==================
 ======================================================*/
 #list {
@@ -108,7 +114,7 @@ section {
   justify-self: center;
   padding-top: 40px;
   margin-top: 50px;
-  margin-left: 50px;
+  margin-left: 100px;
   width: 80%;
 }
 section .showcase {
@@ -118,6 +124,7 @@ section .showcase {
   grid-template-columns: 1fr 8fr;
   grid-template-areas: ". header" ". prep" "ing-header ing" "dir-header dir" ". buttons";
   align-content: right;
+  margin-left:100px;
 }
 
 section .showcase #prep {
@@ -155,11 +162,12 @@ section .showcase #showcase-ingredients,
 section .showcase #showcase-directions {
   text-align: left;
   line-height: 1.6;
-  font-size: 17px;
+  font-size: 20px;
   padding: 10px 30px;
   background-color: white;
   margin: 10px;
   color: black;
+  margin-left: 150px;
 }
 section .showcase #showcase-ingredients {
   list-style-type: disc;
@@ -186,7 +194,7 @@ section .showcase #header-ing, section .showcase #header-dir {
   text-orientation: mixed;
   font-size: 40px;
   padding: 0;
-  margin: 0;
+  margin: 100px;
   place-self: center end;
   transform: rotate(180deg);
 }

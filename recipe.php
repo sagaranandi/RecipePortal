@@ -3,6 +3,7 @@
 
 <head>
 
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,9 +18,14 @@
 
 <body>
 
+
 <div id="cont">
             <header>
-                <h1>Khana<br>Khazana</h1> 
+                <h2 style="  font-size: 30px;
+  line-height: 0.8;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: 'Italiana', serif;">Khana<br>Khazana</h2> 
             </header>
             <div>
     <?php include 'partials/_dbconnect.php'?>
@@ -60,7 +66,7 @@
             </div>
         </div>
     </div>
-
+    <button class="btn" onclick=location.href="/miniproject/index.php" .style.display='initial'">Home</button>
     <div class="container"  id=ques>
         
 

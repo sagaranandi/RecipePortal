@@ -26,13 +26,13 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/2400x550/?streetfood,chocolates" class="d-block w-100" alt="...">
+                <img src="https://source.unsplash.com/2400x550/?streetfood,cakes" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x550/?streetfood,pizza" class="d-block w-100 " alt="...">
+                <img src="https://source.unsplash.com/2400x550/?food,pizza" class="d-block w-100 " alt="...">
             </div>
             <div class="carousel-item">
-                <img src="https://source.unsplash.com/2400x550/?streetfood,burger" class="d-block w-100 " alt="...">
+                <img src="https://source.unsplash.com/2400x550/?streetfood,noodles" class="d-block w-100 " alt="...">
             </div>
         </div>
         <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-bs-slide="prev">
@@ -63,7 +63,7 @@
       $id=$row['cid'];
      echo '<div class="col-md-3">
             <div class="card " style="width: 15rem;">
-              <img src="https://source.unsplash.com/500x400/?junkfood, '.$cat.'" class="card-img-top" alt="...">
+              <img src="https://source.unsplash.com/500x400/?streetfood, '.$cat.'" class="card-img-top" alt="...">
               <div class="card-body ">
                 <h5 class="card-title"><a class="text-dark" href="/miniproject/recipeslist.php?catid='.$id.'">'.$cat.'</a></h5>
                  
