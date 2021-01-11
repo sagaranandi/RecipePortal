@@ -62,7 +62,7 @@
             </div>
         </div>
     </div>
-    <button class="btn" onclick=location.href="/miniproject/index.php" .style.display='initial'">Home</button>
+    <button class="btn" onclick=location.href="/miniproject/index.php" .style.display='center'">Home</button>
     <div class="container"  id=ques>
         
 

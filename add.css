@@ -164,9 +164,8 @@ section .showcase #showcase-directions {
   font-size: 20px;
   padding: 10px 30px;
   background-color: white;
-
+  margin: 10px;
   color: black;
- 
 }
 section .showcase #showcase-ingredients {
   list-style-type: disc;
@@ -184,9 +183,11 @@ section .showcase #buttons {
 }
 section .showcase #header-ing {
   grid-area: ing-header;
+  margin-left: 200PX;
 }
 section .showcase #header-dir {
   grid-area: dir-header;
+  margin-left: 250px;
 }
 section .showcase #header-ing, section .showcase #header-dir {
   writing-mode: vertical-lr;
