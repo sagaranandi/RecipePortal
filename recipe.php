@@ -21,11 +21,7 @@
 
 <div id="cont">
             <header>
-                <h2 style="  font-size: 30px;
-  line-height: 0.8;
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Italiana', serif;">Khana<br>Khazana</h2> 
+                <h2>Khana<br>Khazana</h2> 
             </header>
             <div>
     <?php include 'partials/_dbconnect.php'?>
