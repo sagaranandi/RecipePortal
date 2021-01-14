@@ -64,9 +64,16 @@
                         <div id="showcase-directions"> <?php echo $steps?></div>
                        
                         </div>
-                        <?php  echo'<button class="btn" ><a class="text-dark" href="/miniproject/index.php" /a> Home </button>
+                        <?php  echo'
+                        <div class="btn-group" >
+                        <style>
+                        .btn-group{
+                          margin-left:550px;
+                        }
+                        </style>
+                        <button class="btn" ><a class="text-dark" href="/miniproject/index.php" /a> Home </button>
                         <button class="btn"><a class="text-dark" href="/miniproject/_Comment.php?rid='.$id.  '"</a>  Comment</button>
-                        <button class="btn"><a class="text-dark" href="/miniproject/partials/_likes.php?rid='.$id.'"</a>  Like</button>';?>
+                        <button class="btn"><a class="text-dark" href="/miniproject/partials/_likes.php?rid='.$id.'"</a>  Like</button></div>';?>
 
                     
                     <div style="margin-left:330px">

@@ -93,7 +93,10 @@ header h2 {
 
 /*===================Buttons==================
 ================================================*/
-.btn {
+
+.btn-group{
+  margin-left:550px;
+}.btn {
   background-color: #FCD12A;
   color: #883000;
   border: none;
@@ -120,7 +123,7 @@ header h2 {
   font-family: "Montserrat", serif;
   margin-left:550px;
 }
-.btn
+
 .btn:hover {
   position: relative;
   box-shadow: none;
