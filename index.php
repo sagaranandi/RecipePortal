@@ -26,7 +26,7 @@
         </ol>
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <img src="https://source.unsplash.com/2400x550/?streetfood,cakes" class="d-block w-100" alt="...">
+                <img src="https://source.unsplash.com/2400x550/?food,cakes" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
                 <img src="https://source.unsplash.com/2400x550/?food,pizza" class="d-block w-100 " alt="...">
