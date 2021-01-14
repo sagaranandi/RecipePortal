@@ -65,6 +65,11 @@ header h2 {
   width: 50%;
   margin: 0 auto;
 }
+#list .btn1 {
+  width: 100%;
+  margin: 0 auto;
+}
+
 #list ul {
   margin: 0;
   margin-top: 50px;
@@ -99,8 +104,23 @@ header h2 {
   font-size: 16px;
   margin: 10px;
   font-family: "Montserrat", serif;
-  margin: 0 auto;
+  margin-left: 600px;
+  
+  }
+.btn1 {
+  background-color: #FCD12A;
+  color: #883000;
+  border: none;
+  padding: 10px;
+  display: block;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 10px;
+  font-family: "Montserrat", serif;
+  margin-left:550px;
 }
+.btn
 .btn:hover {
   position: relative;
   box-shadow: none;
