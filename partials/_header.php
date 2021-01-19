@@ -24,7 +24,8 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     } 
     else{
       echo'<button class="btn btn-outline-success my-0 mx-2 " data-toggle="modal" data-target="loginModal" <a class="nav-link"#" href="#"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#loginModal"></a>Log In</button>
-      <button class="btn btn-outline-success my-0 mx-2" data-toggle="modal" data-target="#signUpModal" <a class="nav-link"#" href="#"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#signUpModal"></a>Sign Up</button>';
+      <button class="btn btn-outline-success my-0 mx-2" data-toggle="modal" data-target="#signUpModal" <a class="nav-link"#" href="#"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#signUpModal"></a>Sign Up</button>
+      <button class="btn btn-outline-success my-0 mx-2" data-toggle="modal" data-target="#adminModal" <a class="nav-link"#" href="#"  data-toggle="modal" data-bs-toggle="modal" data-bs-target="#adminModal"></a>Admin</button>';
     } 
    
 
@@ -40,6 +41,7 @@ echo '<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
  
 include 'partials/_loginModal.php';
 include 'partials/_signUpModal.php';
+include 'partials/_adminModal.php';
 include 'partials/_handleSignUp.php';
   if(isset($_GET['signUpSuccess']) && $_GET['signUpSuccess']=="true"){
     echo '<div class="alert alert-success alert-dismissible fade show my-0" role="alert">

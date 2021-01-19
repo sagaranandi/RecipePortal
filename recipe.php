@@ -26,7 +26,7 @@
                 <h2>Khana<br>Khazana</h2>
                  <?php 
                 $id = $_GET['rid'];
-                $likes="SELECT `count` from `likes` where rid='$id' ";
+                $likes="SELECT `likes` from `likes` where rid='$id' ";
                 $res=mysqli_query($conn,$likes);
                 $num=mysqli_num_rows($res);
                 if($num>0)
@@ -73,9 +73,10 @@
                         </style>
                         <button class="btn" ><a class="text-dark" href="/miniproject/index.php" /a> Home </button>
                         <button class="btn"><a class="text-dark" href="/miniproject/_Comment.php?rid='.$id.  '"</a>  Comment</button>
-                        <button class="btn"><a class="text-dark" href="/miniproject/partials/_likes.php?rid='.$id.'"</a>  Like</button></div>';?>
+                        <button class="btn"><a class="text-dark" href="/miniproject/partials/_likes.php?rid='.$id.'"</a>  Like</button>
+                        </div>';?>
 
-                    
+                   <?php include  'partials/_adminModal.php'?>
                     <div style="margin-left:330px">
                     
                      <?php

@@ -51,6 +51,7 @@ $steps= $_POST['steps'];
 
 
 $sql="INSERT INTO `recipes`(  `category`, `cid`, `rname`, `ingredients`, `steps`, `date`) VALUES ('$catname','$cid','$rname','$ingredients','$steps',current_timestamp())";
+
 //echo $sql;
 if($conn->query($sql)==true){
    // echo "Successfully inserted";
@@ -62,6 +63,7 @@ if($conn->query($sql)==true){
     echo "ERROR: $sql <br> $conn->error";  
 
   }
+ 
 }
 ?>
         <?php
