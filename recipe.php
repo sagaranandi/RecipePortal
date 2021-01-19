@@ -33,7 +33,7 @@
                 { 
                 echo'<h3>Likes:';  
                 $n=mysqli_fetch_assoc($res);
-                $l= $n['count'];
+                $l= $n['likes'];
                 echo $l;
                 }
                 ?> 

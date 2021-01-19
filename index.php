@@ -73,8 +73,43 @@
      </div>';
      }
     ?>
-    </div>
-    </div>
+
+
+
+<div class="container my-3">
+    <h2 class="text-center my-3 " style="font-family:courier">Top Recipes</h2>
+    <div class="row">
+    <!--Fetch all Categories-->
+    <?php
+    $sql1= "SELECT `rid` FROM `likes` WHERE likes>15";
+    $result1=mysqli_query($conn,$sql1);
+   
+    while($row =mysqli_fetch_assoc($result1)){
+     $rid=$row['rid'];
+     $sql2="SELECT `rname` FROM `recipes` WHERE rid=$rid";
+     $q = mysqli_query($conn,$sql2);
+
+     $n=mysqli_fetch_assoc($q);
+     $rname= $n['rname'];
+    
+     echo '<div class="col-md-3">
+            <div class="card " style="width: 15rem;">
+              <img src="https://source.unsplash.com/500x400/?streetfood, '.$rname.'" class="card-img-top" alt="...">
+              <div class="card-body ">
+                <h5 class="card-title"><a class="text-dark" href="/miniproject/recipe.php?rid='.$rid.'">'.$rname.'</a></h5>
+                 
+             
+         </div>
+         </div>
+     </div>';
+     }
+    ?>
+
+
+
+    
+
+    
     <?php include 'partials/_footer.php'?>
   
     
